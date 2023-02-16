@@ -16,6 +16,8 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.description}>
+          <h2>Proyecto de prueba para deploy en AWS Amplify</h2>
+          <h3>Usando variables de entorno: NOMBRE={process.env.NOMBRE} , CALLE={process.env.CALLE} , PAIS:{[process.env.PAIS]}</h3>
           <p>
             Get started by editing&nbsp;
             <code className={styles.code}>src/pages/index.js</code>
