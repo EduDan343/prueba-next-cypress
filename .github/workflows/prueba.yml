@@ -18,7 +18,7 @@ jobs:
           node-version: 16.13.1
       - run: |
           echo "Hola hubo alguna modificacion"
-          echo "Variable leida de entorno NAME : $PAIS"
+          echo "Variable leida de entorno PAIS : ${{ vars.PAIS }}"
 
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
