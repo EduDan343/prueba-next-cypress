@@ -1,0 +1,28 @@
+name: Corriendo pruebas Cypress
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    name: Corriendo pruebas con Github Actions
+    steps:
+      # realiza una copia del repositorio
+      - name: Checkout
+        uses: actions/checkout@v3 
+      # instala node
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.13.1
+      - run: 
+          echo "Hola hubo alguna modificacion"
+
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v5 # use the explicit version number
+        with:
+          build: npm run build
+          start: npm start
