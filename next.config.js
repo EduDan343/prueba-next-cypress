@@ -4,7 +4,7 @@ const nextConfig = {
   env: {
     NOMBRE: process.env.NOMBRE,
     CALLE: process.env.CALLE,
-    PAIS: process.env.PAIS || vars.PAIS
+    PAIS: process.env.PAIS
   }
 }
 
